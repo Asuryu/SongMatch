@@ -1,0 +1,394 @@
+@import url("fonts.css");
+
+*{
+    outline: none;
+}
+
+body{
+    overflow: hidden;
+}
+
+navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #161616;
+}
+
+navbar .logo{
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+navbar .button{
+    transition: 0.3s;
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    cursor: pointer;
+}
+navbar .button g{
+    fill: #ab4ffc4d;
+    transition: 0.3s;
+}
+navbar .button:hover g{
+    fill: #ab4ffc75;
+}
+navbar a#profilePic img{
+    position: absolute;
+    right: 7px;
+    width: 37px;
+    height: 37px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    border-radius: 50%;
+}
+.premium{
+    position: absolute;
+    right: 54px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: auto;
+    height: auto;
+    padding: 2px 7px 0px 7px;
+    line-height: auto;
+    color: white;
+    border-radius: 4px;
+    font-family: AdiLight;
+    font-size: 12px;
+    background-color: #2e2e2e;
+}
+
+.text{
+    z-index: 3;
+    position: absolute;
+    color: white;
+    top: 50px;
+    left: 50%;
+    width: 100vw;
+    height: 260px;
+    transform: translate(-50%, 0%);
+}
+.text h{
+    position: absolute;
+    left: 50%;
+    top: 95px;
+    width: 100vw;
+    font-family: AdiBold;
+    font-size: 40px;
+    transform: translate(-50%, 0%);
+    text-align: center;
+}
+.text p{
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    font-family: AdiLight;
+    font-size: 25px;
+    transform: translate(-50%, 0%);
+    text-align: center;
+}
+#darkner{
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    height: 260px;
+    background-color: #202020c7;
+}
+
+.banner img{
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    height: 260px;
+}
+
+.disk{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.disk img{
+    z-index: 5;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 50%;
+    bottom: -50px;
+    transform: translate(-50%, 0%);
+}
+.disk img.s1{
+    z-index: 4;
+    height: 100px;
+    width: 100px;
+    animation: anim 1s infinite;
+}
+.disk img.s2{
+    z-index: 3;
+    height: 100px;
+    width: 100px;
+    animation: anim2 1s infinite;
+}
+
+.search-bar{
+    position: absolute;
+    left: 50%;
+    top: 350px;
+    width: 450px;
+    height: 35px;
+    transform: translate(-50%, 0%);
+}
+
+.search-bar input{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 35px;
+    border-radius: 41px;
+    background-color: transparent;
+    border: 3px solid #AC4FFB;
+    font-family: AdiLight;
+    font-size: 15px;
+    text-align: center;
+}
+.search-bar input::placeholder{
+    font-family: AdiLight;
+    font-size: 15px;
+    text-align: center;
+}
+
+.search-bar i{
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    left: 8px;
+    color: #AC4FFB;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@keyframes anim {
+	0% {
+        width: 100px;
+        width: 100px;
+		opacity: 0.6;
+	}
+	100% {
+		width: 110px;
+		height: 110px;
+		opacity: 0;
+	}
+}
+@keyframes anim2 {
+	0% {
+        width: 100px;
+        height: 100px;
+		opacity: 0.6;
+	}
+	100% {
+		width: 120px;
+		height: 120px;
+		opacity: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    z-index: 1040;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 400px;
+    transform: translate(-50%, 0%);
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    z-index: 1040;
+    position: absolute;
+    display: block;
+    min-width: 230px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-radius: 10px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a{
+    z-index: 1040;
+      margin-bottom: 5px;
+      border: 1px solid #ddd;
+      width: 420px;
+      height: 40px;
+      background-color: white;
+  }
+  .dropdown-content a img{
+      position: relative;
+      width: 50px;
+      height: 50px;
+      border-radius: 7px;
+      top: 50%;
+      left: -10px;
+      transform: translate(0%, -50%);
+  }
+  .dropdown-content a h{
+      position: relative;
+      max-width: 375px;
+      max-height: 20px;
+      left: -5px;
+      top: -30px;
+      font-family: AdiBold;
+      color:rgb(61, 61, 61);
+      font-size: 26px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+  }
+  .dropdown-content a p{
+    position: relative;
+    max-width: 375px;
+    max-height: 20px;
+    left: 49px;
+    top: -48px;
+    font-family: AdiLight;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+  }
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+      background-color: #dadada
+    }
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;} 
+
+
+.popular{
+    position: absolute;
+    width: 500px;
+    height: 160px;
+    border: none;
+}
+.popular h{
+    position: absolute;
+    left: 10px;
+    top: -5px;
+    font-family: AdiBold;
+    font-size: 24px;
+    color: #2e2e2e;
+}
+.popular img{
+    z-index: 100;
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    bottom: -40px;
+    background-color: #be73ff7e;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    -webkit-box-shadow: 8px 8px 23px 0px rgba(0,0,0,0.151);
+-moz-box-shadow: 8px 8px 23px 0px rgba(0,0,0,0.151);
+box-shadow: 8px 8px 23px 0px rgba(0, 0, 0, 0.151);
+}
+#artists{
+    left: 50px;
+    top: 500px;
+}
+#tracks{
+    right: 50px;
+    top: 500px;
+}
+#tracks h{
+    right: 10px;
+    text-align: right;
+}
+#artists img{
+    margin-left: 10px;
+    float: left;
+}
+#tracks img{
+    margin-right: 10px;
+    float: right;
+}
+
+.wrap{
+    z-index: 1000;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    border-radius: 5px;
+    width: 500px;
+    height: 305px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+.wrap div{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 480px;
+    height: 65px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.wrap .number{
+    z-index: 1001;
+    position: relative;
+    top: 0px;
+    left: 10px;
+    font-family: AdiLight;
+    font-size: 20px;
+}
+span{
+    font-family: AdiBold;
+}
+
+.songDkn{
+    display: none;
+    z-index: 1001;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    height: 260px;   
+    background-color: #292929;
+}

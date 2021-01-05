@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SongMatch - Generate a playlist based on your taste</title>
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/spotify.js"></script>
+        <link rel="icon" href="../assets/Icon simple-applemusic copy.png">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/9e065bff0c.js" crossorigin="anonymous"></script>
+        <script src="../js/engine.js"></script>
+    </head>
+    <body>
+        <navbar>
+            <a style="display: none;" id="profilePic" href="#"><img src="../assets/transparent.png"></a>
+            <div style="display: none;" class="premium">PREMIUM</div>
+            <a href="#"><svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="35" viewBox="0 0 281 60.5">
+                <defs>
+                  <linearGradient id="linear-gradient" x1="0.074" x2="0.864" y2="1" gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#007fff"/>
+                    <stop offset="1" stop-color="#f03cff"/>
+                  </linearGradient>
+                </defs>
+                <text id="SongMatch" transform="translate(79 46)" fill="#fff" font-size="40" font-family="adineuePRO-Bold, adineue PRO" font-weight="700"><tspan x="0" y="0">Song</tspan><tspan y="0" font-family="adineuePRO-Regular, adineue PRO" font-weight="400">Match</tspan></text>
+                <rect id="Retângulo_9" data-name="Retângulo 9" width="46" height="44" transform="translate(7 8)" fill="#fff"/>
+                <path id="Icon_simple-applemusic" data-name="Icon simple-applemusic" d="M60.5,15.438a23.269,23.269,0,0,0-.605-5.521,12.4,12.4,0,0,0-5.5-7.672A12.661,12.661,0,0,0,49.663.412,26.463,26.463,0,0,0,45.72.034c-.1-.008-.209-.025-.313-.033H15.094c-.383.025-.764.043-1.147.066A17.582,17.582,0,0,0,8.418,1.078,12.594,12.594,0,0,0,1.2,8.086a14.171,14.171,0,0,0-.915,3.55,26.747,26.747,0,0,0-.252,2.975c0,.081-.018.156-.025.234V45.66c.025.353.043.713.068,1.069a16.591,16.591,0,0,0,1.253,5.982,12.556,12.556,0,0,0,8.153,7.064,16.57,16.57,0,0,0,3.26.575c1.4.134,2.8.151,4.2.151H44.746a31.515,31.515,0,0,0,3.958-.252,13.458,13.458,0,0,0,5.788-2.042,12.721,12.721,0,0,0,4.74-5.566,13.969,13.969,0,0,0,.933-3.338,30.812,30.812,0,0,0,.345-5.143Q60.5,29.79,60.5,15.438ZM44.3,25.5V39.9a6.791,6.791,0,0,1-.615,3.04,5.339,5.339,0,0,1-3.5,2.874,11.634,11.634,0,0,1-2.7.436,4.717,4.717,0,0,1-2.282-8.97,10.755,10.755,0,0,1,2.566-.817c.953-.207,1.911-.386,2.859-.605a1.557,1.557,0,0,0,1.286-1.3,2.279,2.279,0,0,0,.05-.487q0-6.864-.005-13.722a1.827,1.827,0,0,0-.066-.466.725.725,0,0,0-.766-.59,9.121,9.121,0,0,0-1.2.166q-2.874.567-5.748,1.15l-5.864,1.185-3.464.7c-.04.008-.081.025-.121.033a1.136,1.136,0,0,0-.983,1.235c-.005.106,0,.217,0,.328q-.008,9.84-.008,19.677a7.729,7.729,0,0,1-.542,3.093,5.368,5.368,0,0,1-3.615,3.108,11.2,11.2,0,0,1-2.71.434,4.639,4.639,0,0,1-4.84-3.892,4.7,4.7,0,0,1,2.909-5.231,14.869,14.869,0,0,1,2.793-.782c.724-.151,1.45-.292,2.168-.446a1.754,1.754,0,0,0,1.513-1.8V37.87q0-11.193.005-22.392a4.011,4.011,0,0,1,.106-.933,1.75,1.75,0,0,1,1.376-1.306c.643-.166,1.3-.282,1.951-.416,1.848-.378,3.7-.746,5.546-1.119l5.723-1.16c1.689-.338,3.378-.681,5.067-1.016a15.3,15.3,0,0,1,1.674-.267,1.243,1.243,0,0,1,1.4,1.215,5.18,5.18,0,0,1,.03.562q.008,7.223,0,14.451Z" transform="translate(-0.003 -0.001)" fill="url(#linear-gradient)"/>
+            </svg></a>
+
+            <a onclick="auth();"><svg class="button" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 196 63">
+                <g id="Retângulo_2" data-name="Retângulo 2" fill="rgba(172,79,252,0.47)" stroke="#ac4ffb" stroke-width="3">
+                  <rect width="196" height="63" rx="31.5" stroke="none"/>
+                  <rect x="1.5" y="1.5" width="193" height="60" rx="30" fill="none"/>
+                </g>
+                <text id="Login_with_Spotify" data-name="Login with
+              Spotify" transform="translate(80 30)" fill="#fff" font-size="20" font-family="adineuePRO-Regular, adineue PRO"><tspan x="0" y="0">Login with</tspan><tspan font-family="adineuePRO-Bold, adineue PRO" font-weight="700"><tspan x="0" y="18">Spotify</tspan></tspan></text>
+                <path id="Icon_awesome-spotify" data-name="Icon awesome-spotify" d="M17.438.563A17.438,17.438,0,1,0,34.875,18,17.444,17.444,0,0,0,17.438.563Zm7.08,25.657a1.342,1.342,0,0,1-.752-.253c-4.388-2.644-9.492-2.756-14.534-1.723a4.54,4.54,0,0,1-.837.183,1.1,1.1,0,0,1-1.111-1.111,1.114,1.114,0,0,1,.956-1.181C14,20.862,19.884,20.974,24.9,23.977a1.189,1.189,0,0,1,.682,1.16,1.062,1.062,0,0,1-1.069,1.083Zm1.891-4.612a1.736,1.736,0,0,1-.865-.3A22.786,22.786,0,0,0,8.768,19.245a2.9,2.9,0,0,1-.837.183,1.365,1.365,0,0,1-1.364-1.364,1.383,1.383,0,0,1,1.09-1.455,23.65,23.65,0,0,1,6.877-.956,24.613,24.613,0,0,1,12.445,3.2,1.466,1.466,0,0,1,.795,1.385,1.362,1.362,0,0,1-1.364,1.371Zm2.18-5.358a1.617,1.617,0,0,1-.907-.274c-5.006-2.988-13.957-3.705-19.751-2.088a3.34,3.34,0,0,1-.907.183A1.623,1.623,0,0,1,5.386,12.41a1.661,1.661,0,0,1,1.223-1.68,29.469,29.469,0,0,1,8.262-1.069c5.133,0,10.512,1.069,14.442,3.361a1.651,1.651,0,0,1,.907,1.589,1.629,1.629,0,0,1-1.631,1.638Z" transform="translate(29 13.438)" fill="#fff"/>
+            </svg></a>           
+        </navbar>
+        <div class="banner">
+            <div class="text">
+                <h>Want to get recommendations?</h>
+                <p>Start by typing an artist name or a song!</p>
+            </div>
+            <div id="darkner"></div>
+            <img src="../assets/banner copy.png">
+        </div>
+        <div id="artistsP" class="top"></div>
+        <div id="songsP" class="top"></div>
+        <div class="disk">
+            <img class="s0" src="../assets/disco.png">
+            <img class="s1" src="../assets/disco.png">
+            <img class="s2" src="../assets/disco.png">
+        </div>
+
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input onfocus="$('#myDropdown').show()" onblur="setTimeout(function(){$('#myDropdown').hide()}, 200)" oninput="debounce(searchItem(document.getElementById('search').value), 1000)" id="search" placeholder="Artist name, track name, genre">
+        </div>
+        <div class="dropdown">
+            <div id="myDropdown" class="dropdown-content">
+              <a id="s0" href="#s0" onclick="getRecommendations('#s0')">
+                  <img> 
+                  <h></h>
+                  <p></p>
+              </a>
+              <a id="s1" href="#s1" onclick="getRecommendations('#s1')">
+                <img> 
+                <h></h>
+                  <p></p>
+            </a>
+            <a id="s2" href="#s2" onclick="getRecommendations('#s2')">
+                <img> 
+                <h></h>
+                  <p></p>
+            </a>
+              <a id="s3" href="#s3" onclick="getRecommendations('#s3')">
+                <img> 
+                <h></h>
+                  <p></p>
+            </a>
+            </div>
+          </div>
+          
+          <div id="artists" class="popular">
+            <h>Popular Artists</h>
+            <img src="../assets/transparent.png" id="a0">
+            <img src="../assets/transparent.png" id="a1">
+            <img src="../assets/transparent.png" id="a2">
+            <img src="../assets/transparent.png" id="a3">
+          </div>
+          <div id="tracks" class="popular">
+            <h>Popular Songs</h>
+            <img src="../assets/transparent.png" id="t3">
+            <img src="../assets/transparent.png" id="t2">
+            <img src="../assets/transparent.png" id="t1">
+            <img src="../assets/transparent.png" id="t0">
+      </div>
+
+      <div class="wrap"></div>
+      <div class="songDkn"></div>
+      </div>
+
+    </body>
+</html>
