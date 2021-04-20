@@ -1,28 +1,16 @@
-@font-face{
-    font-family: Nexa Light;
-    src: url("../assets/fonts/Nexa Light.otf")
+@font-face {
+	font-family: AdiBold;
+	src: url("../assets/fonts/adineuePRO-Bold.ttf");
 }
-@font-face{
-    font-family: NexaBold;
-    src: url("../assets/fonts/Nexa Bold.otf")
+@font-face {
+	font-family: AdiLight;
+	src: url("../assets/fonts/adineuePRO-Regular.ttf");
 }
-@font-face{
-    font-family: Modelica;
-    src: url("/assets/fonts/Redwing-Light.otf");
+@font-face {
+	font-family: AdiHausB;
+	src: url("../assets/fonts/AdihausDIN-Bold.ttf");
 }
-@font-face{
-    font-family: AdiBold;
-    src: url("/assets/fonts/adineuePRO-Bold.ttf");
-}
-@font-face{
-    font-family: AdiLight;
-    src: url("/assets/fonts/adineuePRO-Regular.ttf");
-}
-@font-face{
-    font-family: AdiHausB;
-    src: url("/assets/fonts/AdihausDIN-Bold.ttf");
-}
-@font-face{
-    font-family: AdiHausL;
-    src: url("/assets/fonts/AdihausDIN-Regular.ttf");
+@font-face {
+	font-family: AdiHausL;
+	src: url("../assets/fonts/AdihausDIN-Regular.ttf");
 }
